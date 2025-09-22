@@ -43,10 +43,10 @@
         let toponim = L.layerGroup();
 
         // Load geojson file
-        fetch('data/toponim.geojson')
+        fetch('DATA/toponim.geojson')
             .then(response => response.json())
-            .then(data => {
-                L.geoJSON(data, {
+            .then(DATA => {
+                L.geoJSON(DATA, {
                     pointToLayer: function (feature, latlng) {
                         return L.marker(latlng, {
                             icon: L.icon({
@@ -107,8 +107,8 @@
 
         });
 
-        $.getJSON("data/sungai.geojson", function (data) {
-            Sungai.addData(data); // Menambahkan data ke dalam GeoJSON Polyline sungai
+        $.getJSON("DATA/sungai.geojson", function (DATA) {
+            Sungai.addDATA(DATA); // Menambahkan DATA ke dalam GeoJSON Polyline sungai
             map.addLayer(Sungai); // Menambahkan GeoJSON Polyline sungai ke dalam peta
         });
 
@@ -143,8 +143,8 @@
 
         });
 
-        $.getJSON("data/jalan.geojson", function (data) {
-            jalan.addData(data); // Menambahkan data ke dalam GeoJSON Polyline Jalan
+        $.getJSON("DATA/jalan.geojson", function (DATA) {
+            jalan.addDATA(DATA); // Menambahkan DATA ke dalam GeoJSON Polyline Jalan
             map.addLayer(jalan); // Menambahkan GeoJSON Polyline Jalan ke dalam peta
         });
 
@@ -208,8 +208,8 @@
             },
         });
 
-        $.getJSON("data/batas_kecamatan.geojson", function (data) {
-            batas_kecamatan.addData(data); // Menambahkan data ke dalam GeoJSON Polygon Jumlah Penduduk
+        $.getJSON("DATA/batas_kecamatan.geojson", function (DATA) {
+            batas_kecamatan.addDATA(DATA); // Menambahkan DATA ke dalam GeoJSON Polygon Jumlah Penduduk
             map.addLayer(batas_kecamatan); // Menambahkan GeoJSON Polygon Jumlah Penduduk ke dalam peta
         });
 
