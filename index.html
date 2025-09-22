@@ -107,8 +107,8 @@
 
         });
 
-        $.getJSON("DATA/sungai.geojson", function (DATA) {
-            Sungai.addData(DATA); // Menambahkan DATA ke dalam GeoJSON Polyline sungai
+        $.getJSON("DATA/sungai.geojson", function (data) {
+            Sungai.addData(data); // Menambahkan DATA ke dalam GeoJSON Polyline sungai
             map.addLayer(Sungai); // Menambahkan GeoJSON Polyline sungai ke dalam peta
         });
 
